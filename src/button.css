@@ -1,0 +1,55 @@
+.button {
+    border: 1px solid grey;
+    width: 100%;
+    height: 100%;
+    background-color: lightblue;
+    font-size: 25px;
+}
+.division {
+    grid-area: division;
+}
+.addition {
+    grid-area: addition;
+}
+.subtraction {
+    grid-area: subtraction;
+}
+.multiplication {
+    grid-area: multiplication;
+}
+.decimal {
+    grid-area: decimal;
+}
+.back {
+    grid-area: back;
+}
+.zero {
+    grid-area: zero;
+}
+.one {
+    grid-area: one;
+}
+.two {
+    grid-area: two;
+}
+.three {
+    grid-area: three;
+}
+.four {
+    grid-area: four;
+}
+.five {
+    grid-area: five;
+}
+.six {
+    grid-area: six;
+}
+.seven {
+    grid-area: seven;
+}
+.eight {
+    grid-area: eight;
+}
+.nine {
+    grid-area: nine;
+}
