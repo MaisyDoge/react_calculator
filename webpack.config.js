@@ -44,7 +44,7 @@ module.exports = function (env) {
                  * 这里的配置设定为，如果有 error，那么就不能继续构建
                  * https://github.com/MoOx/eslint-loader
                  */
-                {
+                /*{
                     enforce: "pre",
                     test: /\.js$/,
                     include: path.resolve(__dirname, 'src'),
@@ -53,7 +53,7 @@ module.exports = function (env) {
                         failOnError: true,
                         fix: true
                     }
-                },
+                },*/
                 /**
                  * babel-loader
                  * 将 es6 转化为 es5

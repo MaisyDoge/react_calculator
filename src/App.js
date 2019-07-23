@@ -2,15 +2,18 @@ import React, { Component } from 'react';
 import './App.css';
 import Form from './form';
 import Button from './button';
+import Algorithm from './algorithm';
 
 class App extends Component {
     state = {
         question: '',
-        answer: 'None',
+        answer: '',
     }
     onChange = (e) => {
+        const res = Algorithm(e.target.value);
         this.setState({
-            content: e.target.value,
+            question: e.target.value,
+            answer: res.toString(),
         });
     }
     onClick = (symbol) => {
@@ -20,21 +23,24 @@ class App extends Component {
     }
     back = (symbol) => {
         console.log(symbol);
-        this.state.question = this.state.question.slice(0, this.state.question.length - 1);
+        this.state.question = this.state.question.slice(0,
+                                                        this.state.question.length - 1);
         this.setState({
             question: this.state.question,
         });
     }
     render() {
+        this.state.answer = Algorithm(this.state.question);
+        console.log("just called algorithm")
         return (
             <div className="calculator">
                 <div className="header">
                     <p>CASIO</p>
                 </div>
                 <Form onChange={this.onChange} value={this.state.question} />
-                <textarea rows="1">
+                <p className="answer">
                     {this.state.answer}
-                </textarea>
+                </p>
                 <Button class="button zero" onClick={this.onClick} symbol="0" />
                 <Button class="button one" onClick={this.onClick} symbol="1" />
                 <Button class="button two" onClick={this.onClick} symbol="2" />
@@ -50,7 +56,7 @@ class App extends Component {
                 <Button class="button division" onClick={this.onClick} symbol="/" />
                 <Button class="button multiplication" onClick={this.onClick} symbol="*" />
                 <Button class="button decimal" onClick={this.onClick} symbol="." />
-                <Button class="button back" onClick={this.back} symbol="<=" />
+                <Button class="button back" onClick={this.back} symbol="del" />
 
             </div>
         );

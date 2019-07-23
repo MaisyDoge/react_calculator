@@ -10,7 +10,7 @@
   grid-template-areas: 
   "header header header header"
   "form form form form"
-  ". answer answer answer"
+  "answer answer answer answer"
   ". . . division"
   "seven eight nine multiplication"
   "four five six subtraction"
